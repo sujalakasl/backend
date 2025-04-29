@@ -1,5 +1,5 @@
 import cron from "cron";
-import http from "https";
+import https from "https";
 
 const job = new cron.CronJob("*/14 * * * *", function () {
   https
