@@ -1,6 +1,7 @@
 import cron from "cron";
 import https from "https";
 
+// This cron job is set to run every 14 minutes and sends a GET request to the specified API URL.
 const job = new cron.CronJob("*/14 * * * *", function () {
   https
     .get(process.env.API_URL, (res) => {
